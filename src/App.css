@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('fonts//PT\ Root\ UI_Regular.woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('fonts//PT\ Root\ UI_Medium.woff');
+    font-weight: 500;
+}
+:root {
+    --mainTextColor: #1A2A45;
+    --mainWhiteColor: #FFFFFF;
+    --mainBlueColor: #6D97FF;
+    --mainLightGreyColor: #ECEEF8;
+    --mainInputBorderColor: #E0E3F4;
+    --mainInputTextColor: #8790AE;
+    --mainHoverBgdColor: #F7F9FE;
+    --mainButtonColor: #FF1B7A;
+    --mainBlackColor: #000000;
+    --mainCarouselText: #2E2E2E;
+    --bodyColor:rgb(226, 237, 240);    
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Root UI';
+    font-weight: 400;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+body { 
+    background-color: var(--bodyColor);  
+}
+input {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none; 
+}
+button {
+    border: none;
+}
+fieldset {
+    border: 0;
+}
+.offering-page {
+    background-color: var(--mainWhiteColor);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1003px;
+    display: flex;
+}
+.offering-page__container {
+   width: 100%;
+   margin: 0 auto;
+   padding: 24px 126px 112px;
+}
+.offering-page__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 56px;
+    color: var(--mainTextColor);
+    position: relative;
+    margin-bottom: 20px;
+}
+.offering-page__title::before {
+    content: url("../src/images/arrow.png");
+    position: absolute;
+    top: 0;
+    left: -34px;
+}
+
+@media(max-width: 840px) {
+    .offering-page__container {
+        padding: 50px 70px;
+    }
+}
+@media(max-width: 650px) {
+    .offering-page__container {
+        padding: 45px 30px;
+    }
+    .offering-page__title {
+        font-size: 45px;
+        padding-left: 20px;
+        margin-bottom: -40px;
+    }
+    .offering-page__title::before {
+        content: url("../src/images/arrow.png");
+        position: absolute;
+        top: 0;
+        left: -8px;
+    }
+    .offering-page {
+        min-height: 100vh;
+    }
+}
+@media(max-width: 520px) {
+    .offering-page__title {
+        font-size: 34px;
+    }
+    .offering-page__container {
+        padding: 35px 20px;
+    }
+}
+
